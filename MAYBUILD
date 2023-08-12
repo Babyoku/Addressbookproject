@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+   tools {
+      maven 'Ijay'
+    }
+
+stages {
+        stage('Build') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
+    }
+}
